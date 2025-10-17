@@ -33,7 +33,8 @@ class VerifyOTP(View):
      def get(self,request):
           return render(request,"otp_verify.html")    
      def post(self,request):
-          otp=request.POST.get("otp")
+          otp=request.POST.get("otp","999")
+          print(otp)
           try:
                user_instance=User.objects.get(otp=otp)
                user_instance.is_active=True
