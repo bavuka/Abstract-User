@@ -27,7 +27,7 @@ class UserReg(View):
             #  return HttpResponse("succes")
              return redirect("verify")
          else:
-               return HttpResponse("notsucces")
+               return HttpResponse("notsuccs")
 
 class VerifyOTP(View):
      def get(self,request):
